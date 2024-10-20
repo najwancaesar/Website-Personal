@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="my-images/Resize-logo (1).png" alt="Logo-poltek" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Pendidikan</a></li>
+                    <li><a href="#">Jadwal Kuliah</a></li>
+                    <li><a href="#">Aktivitas</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <a href="#" class="fas" onclick="closemenu()"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
+                </ul>
+                <a href="#" class="fas" onclick="openmenu()"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+            </nav>
+            <div class="header-text">
+                <p>Game Developer</p>
+                <h1>Hi, Im <span class="naj" style="color: orangered;">Najwan</span><span class="cf" style="color: aqua;">CF</span><br>from <span style="color: red;">Indon</span>esia</h1>
+            </div>
+        </div>
+    </div>
+    <!---------------------- About ----------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="my-images/withkucing(22).jpg" alt="mypicture" height="550px">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, veritatis. Illum esse ad doloremque iste consequatur. Blanditiis rerum culpa doloremque eveniet quae deleniti ex earum minima a, obcaecati, nam eligendi.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designer Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>Game Developer</span><br>Building Game apps and other features</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2004</span><br>My return from isekai to conquer this world</li>
+                            <li><span>2010-2017</span><br>My adventure in Jakarta (home town)</li>
+                            <li><span>2017-untill now</span><br>My adventure in Tangerang (Current Home)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016</span><br>Being a good person for the first time (Just kidding😎)</li>
+                            <li><span>2019</span><br>Graduated from my junior school</li>
+                            <li><span>2021</span><br>Being trusted to be a Deputy head of the student council</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------Services--------------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <img src="my-images/codepen-brands-solid.svg" alt="nothing" width="65%">
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium fuga enim, corporis excepturi illo quisquam non saepe amet odio eos, impedit nisi, consequuntur cumque. Nihil, ea. Dolores minima recusandae corporis?</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <img src="my-images/apple-brands-solid.svg" alt="nothing" width="70%">
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium fuga enim, corporis excepturi illo quisquam non saepe amet odio eos, impedit nisi, consequuntur cumque. Nihil, ea. Dolores minima recusandae corporis?</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <img src="my-images/cubes-solid.svg" alt="nothing" width="65%" >
+                    <h2>Game Design</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium fuga enim, corporis excepturi illo quisquam non saepe amet odio eos, impedit nisi, consequuntur cumque. Nihil, ea. Dolores minima recusandae corporis?</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------portfolio------------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="work 1">
+                    <div class="layer">
+                        <h3>Social Media Apps</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero corporis quibusdam omnis pariatur voluptas eos autem est praesentium quo sint. Ad dolorem modi dolorum nobis autem ducimus consequuntur harum quas!</p>
+                        <a href="#">♯</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" alt="work 2">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero corporis quibusdam omnis pariatur voluptas eos autem est praesentium quo sint. Ad dolorem modi dolorum nobis autem ducimus consequuntur harum quas!</p>
+                        <a href="#">シ</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" alt="work 3">
+                    <div class="layer">
+                        <h3>Online Shop App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero corporis quibusdam omnis pariatur voluptas eos autem est praesentium quo sint. Ad dolorem modi dolorum nobis autem ducimus consequuntur harum quas!</p>
+                        <a href="#">〴</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more !</a>
+        </div>
+    </div>
+    <!-- -------------------contact------------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact me</h1>
+                    <p><p class="icons">📝</p>najwan12311@gmail.com</p>
+                    <p><p class="icons">☎️</p>(+62) 87884839384</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/najwan.cf.9"><img class="img" src="my-images/fb-logo2-removebg-preview.png" alt="facebook" ></a>
+                        <a href="https://www.instagram.com/legendary_smoothie?igsh=MWJsdXJybDFoOHlwdQ=="><img class="img" src="my-images/ig-logo-removebg-preview.png" alt="Instagram"></a>
+                        <a href="https://www.linkedin.com/in/najwan-cf-152814266/"><img class="img" src="my-images/linked-in-logo-removebg-preview.png" alt="Linkedin"></a>
+                        <a href="https://github.com/najwancaesar"><img class="img" src="my-images/github2.png" alt="Discord"></a>
+                    </div>
+                    <a href="my-images/CV.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © NajwanCF. Made with 🧡 by a very charming moods 😇</p>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for(tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+    </script>
+    
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzNzgQYWYijo1DhD7zr1t6VBmEQb6ymo-x4uW14W6ZZL8pydur6lPCSeC-tQs8JDC7Kcg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+</html>
