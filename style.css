@@ -78,6 +78,15 @@ h1 span {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.link:hover {
+    background-color: darkorange;
+    opacity: 0.5 ease-in;
+    cursor: pointer;
+}
+.link {
+    text-decoration: none;
+    color: #ff004f;
+}
 .about-col-1 {
     flex-basis: 35%;
 }
@@ -150,10 +159,10 @@ h1 span {
     font-weight: 300;
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+}
+.services-list div p {
+    text-align: justify;
+    color: #98FF98;
 }
 .services-list div h2 {
     margin-top: 35px;
@@ -211,10 +220,6 @@ h1 span {
     text-align: center;
     font-size: 14px;
     transition: height 0.5s;
-    -webkit-transition: height 0.5s;
-    -moz-transition: height 0.5s;
-    -ms-transition: height 0.5s;
-    -o-transition: height 0.5s;
 }
 .layer h3 {
     font-weight: 500;
