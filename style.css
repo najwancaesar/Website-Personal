@@ -12,11 +12,17 @@ body {
     color: #fff;
 }
 #header {
-    width: 100%;
     height: 100vh;
+    width: 100%;
     background-image: url(my-images/publicspeaking.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+#about, #services, #portfolio, #contact {
+    position: relative;
+    z-index: 1;
 }
 .container {
     padding: 0px 10%;
@@ -62,12 +68,6 @@ nav ul li a:hover::after {
     font-size: 60px;
     margin-top: 20px;
 }
-.header-text h1 span {
-    color: orangered;
-}
-h1 span {
-    color: aqua;
-}
 /* ---------------------- About ----------------------------- */
 #about {
     padding: 80px 0;
@@ -78,29 +78,27 @@ h1 span {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.link:hover {
-    background-color: darkorange;
-    opacity: 0.5 ease-in;
-    cursor: pointer;
-}
-.link {
-    text-decoration: none;
-    color: #ff004f;
-}
 .about-col-1 {
     flex-basis: 35%;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px rgba(251, 252, 251, 0.2);
 }
 .about-col-1 img {
     width: 100%;
-    border-radius: 15px;
+    border-radius: 18px;
+    transition: transform 0.3s ease;
+}
+.about-col-1:hover img{
+    transform: scale(1.2);
+    cursor: pointer;
 }
 .about-col-2 {
     flex-basis: 60%;
 }
 .sub-title {
-    font-size: 60px;
+    font-size: 55px;
     font-weight: 600;
-    color: #fff;
+    color: yellowgreen;
 }
 .tab-titles {
     display: flex;
@@ -124,14 +122,14 @@ h1 span {
     transition: 0.5s;
 }
 .tab-links.active-link::after {
-    width: 50%;
+    width: 100%;
 }
 .tab-contents ul li {
     list-style: none;
     margin: 10px 0;
 }
 .tab-contents ul li span {
-    color: #b54769;
+    color: cyan;
     font-size: 14px;
 }
 .tab-contents {
@@ -247,7 +245,7 @@ h1 span {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid greenyellow;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -255,7 +253,7 @@ h1 span {
     transition: background 0.5s;
 }
 .btn:hover {
-    background: #ff004f;
+    background: darkcyan;
     cursor: pointer;
 }
 .img {
@@ -283,6 +281,23 @@ h1 span {
 .social-icons {
     margin-top: 30px;
 }
+.img {
+    width: 40px; /* Atur lebar sesuai kebutuhan */
+    height: 40px; /* Atur tinggi agar proporsional */
+    margin: 0 10px; /* Ruang antar logo */
+    display: inline-block; /* Agar mereka berjejer secara horizontal */
+    vertical-align: middle; /* Untuk perataan vertikal */
+}
+.img-fb {
+    width: 40px; /* Atur lebar sesuai kebutuhan */
+    height: 40px; /* Atur tinggi agar proporsional */
+    margin: 0 10px; /* Ruang antar logo */
+    display: inline-block; /* Agar mereka berjejer secara horizontal */
+    vertical-align: middle; /* Untuk perataan vertikal */
+    width: 65%;
+    padding: 5px;
+    left: 5px;
+}
 .social-icons a {
     text-decoration: none;
     font-size: 30px;
@@ -297,7 +312,14 @@ h1 span {
 }
 .btn.btn2 {
     display: inline-block;
-    background-color: #ff004f;
+    background-color: none;
+    text-decoration: none;
+}
+.btn.btn2:hover {
+    background-color: darkcyan;
+}
+.btn.btn2 {
+    background-color: transparent;
 }
 .contact-right form {
     width: 100%;
@@ -312,16 +334,16 @@ form input, form textarea {
     color: #fff;
     font-size: 18px;
     border-radius: 6px;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    -ms-border-radius: 6px;
-    -o-border-radius: 6px;
 }
 form .btn2 {
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
+}
+footer {
+    position: relative; /* Pastikan ini diatur dengan benar */
+    z-index: 1; /* Atur z-index jika perlu */
 }
 .copyright {
     width: 100%;
