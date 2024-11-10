@@ -1,0 +1,140 @@
+/* Reset default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav .nav-links li a:hover {
+    color: #ddd;
+}
+
+/* Body dan galeri */
+body {
+    font-family: Arial, sans-serif;
+    background-color: darkcyan;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px; /* Tambah padding agar konten tidak tertutup navbar */
+    overflow-x: hidden; /* Hindari scroll horizontal secara keseluruhan */
+}
+
+h1 {
+    margin: 20px 0;
+    color: #333;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Galeri */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Batasi 5 kolom di desktop */
+    gap: 15px;
+    max-width: 1000px;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+/* Galeri item dan efek overlay */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    aspect-ratio: 1 / 1;
+    opacity: 0; /* Mulai dengan opacity 0 untuk efek muncul */
+    transform: translateY(50px); /* Posisi awal efek parallax */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Tambahkan efek transformasi */
+}
+
+/* Transform scale pada hover */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item.active {
+    opacity: 1;
+    transform: translateY(0);
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(1, minmax(150px, 1fr)); /* Tampilkan 5 kolom di layar kecil */
+        gap: 10px;
+        max-width: initial;
+        width: 800px; /* Lebar lebih besar dari layar agar scroll horizontal aktif */
+        padding: 10px 0; /* Hilangkan padding samping untuk menghindari tampilan terlalu lebar */
+        overflow-x: auto; /* Tambahkan scroll horizontal */
+    }
+
+    nav .nav-links {
+        font-size: 0.9em; /* Kurangi ukuran font pada layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: repeat(1, minmax(120px, 1fr)); /* Lebar kolom lebih kecil di mobile */
+        gap: 8px;
+        width: 600px; /* Atur ulang lebar agar tetap ada scroll horizontal */
+        overflow-x: auto;
+    }
+}

@@ -6,6 +6,44 @@
     <title>My Web Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typeit@8.0.3/dist/index.umd.js"></script>
+    <script>
+            // Menambahkan elemen audio untuk suara typing
+            var typingSound = new Audio('C:\Users\Najwan CF\Documents\Folder Coding\Web Portofolio\audio\sound-type2.mp3'); // Ganti dengan path ke file audio ketikan Anda
+            // Fungsi untuk memainkan suara typing
+            function playTypingSound() {
+                typingSound.currentTime = 0;  // Memastikan suara mulai dari awal
+                typingSound.play();
+            }
+        document.addEventListener("DOMContentLoaded", function () {
+                new TypeIt(".header-text p", {
+                    strings: ["I'm <span style='color: crimson;'>NajwanCF</span> a.k.a <span style='color: springgreen; text-decoration: oblique;'>Just4Fun</span>"],
+                    speed: 130, // Kecepatan pengetikan (opsional)
+                    breakLines: false,
+                    loop: true, // Loop teks
+                    deleteSpeed: 90, // Kecepatan penghapusan teks (opsional)
+                    afterStringTyped: function () {
+                        playTypingSound(); // Memainkan suara setelah tiap karakter diketik
+                    },
+                    beforeStringTyped: function () {
+                        playTypingSound(); // Memainkan suara sebelum tiap karakter diketik
+                    }
+                }).go();
+                // Menambahkan efek ketik sekali pada elemen <h1>
+                new TypeIt(".header-text h1", {
+                    strings: [""],
+                    speed: 150,  // Kecepatan pengetikan
+                    breakLines: true,  // Memungkinkan break line
+                    loop: false,  // Tidak looping
+                    afterStringTyped: function () {
+                        playTypingSound(); // Memainkan suara setelah tiap karakter diketik
+                    },
+                    beforeStringTyped: function () {
+                        playTypingSound(); // Memainkan suara sebelum tiap karakter diketik
+                    }
+                }).go();
+            });
+    </script>
 </head>
 <body>
     <div id="header">
@@ -15,17 +53,18 @@
                 <ul id="sidemenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Pendidikan</a></li>
-                    <li><a href="Mini dashboard/jadwal-kuliah.html">Jadwal Kuliah</a></li>
+                    <li><a href="#">Jadwal Kuliah</a></li>
                     <li><a href="#">Aktivitas</a></li>
-                    <li><a href="Mini dashboard/dashboard.html">Portfolio</a></li>
+                    <li><a href="#">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <a href="#" class="fas" onclick="closemenu()"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
                 </ul>
                 <a href="#" class="fas" onclick="openmenu()"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
             </nav>
             <div class="header-text">
-                <p>I'm <span style="color: crimson;">NajwanCF </span>a.k.a <span style="color: springgreen; text-decoration: oblique;">Just4Fun</span></p>
-                <h1>#<span class="naj" style="color: orangered;">Be</span><span class="cf" style="color: blueviolet;"> Yourself</span><br>#<span style="color: red;">Indo</span>nesian Pride</h1>
+                <p>I'm <span style="color: crimson;">NajwanCF </span>a.k.a <span
+                        style="color: springgreen; text-decoration: oblique;">Just4Fun</span></p>
+                <h1>#<span class="naj" style="color: orangered;">Be</span> Your<span style="color: rgb(33, 99, 241);">self</span><br>#<span style="color: red;">Indo</span>nesian <span style="color: rgb(242, 245, 53);">Pride</span></h1>
             </div>
         </div>
     </div>
@@ -126,7 +165,7 @@
                     </div>
                 </div>
             </div>
-            <a href="Galeri-Photo/Nyoba.html" class="btn" target="_blank">See more about my Gallery !</a>
+            <a href="Galeri-Photo/galeri.html" class="btn" target="_blank">See more about my Gallery !</a>
         </div>
     </div>
     <!-- -------------------contact------------------------- -->
@@ -137,13 +176,13 @@
                     <h1 class="sub-title">Contact me</h1>
                     <p><p class="icons">📝</p>najwan12311@gmail.com</p>
                     <p><p class="icons">☎️</p>(+62) 87884839384</p>
-                    <div class="social-icons">
+                    <div class="social-icons" style=" margin-top: 2em; margin-left: -3%;">
                         <a href="https://www.facebook.com/najwan.cf.9" target="_blank"><img class="img-fb" src="my-images/fb-logo2-removebg-preview.png" alt="facebook"></a>
                         <a href="https://www.instagram.com/legendary_smoothie?igsh=MWJsdXJybDFoOHlwdQ==" target="_blank"><img class="img" src="my-images/ig-logo-removebg-preview.png" alt="Instagram"></a>
                         <a href="https://www.linkedin.com/in/najwan-cf-152814266/" target="_blank"><img class="img" src="my-images/linked-in-logo-removebg-preview.png" alt="Linkedin"></a>
                         <a href="https://github.com/najwancaesar" target="_blank"><img class="img" src="my-images/github2.png" alt="Discord"></a>
                     </div>
-                    <a href="my-images/CV.pdf" download class="btn btn2" target="_blank">Download CV</a>
+                    <a href="my-images/CV.pdf" download class="btn btn2" target="_blank" style="margin-top: 18%;">Download CV</a>
                 </div>
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">

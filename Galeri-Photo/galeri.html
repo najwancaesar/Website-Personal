@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Foto</title>
+    <link rel="stylesheet" href="galeri2.css">
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const galleryItems = document.querySelectorAll(".gallery-item");
+        function handleScroll() {
+            galleryItems.forEach((item) => {
+                const rect = item.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    item.classList.add("active");
+                }
+            });
+        }
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); // Panggil sekali saat halaman dimuat
+    });
+</script>
+<body>
+    <nav>
+        <div class="logo">Logo</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">Pendidikan</a></li>
+            <li><a href="#">Jadwal Kuliah</a></li>
+            <li><a href="#">Aktivitas</a></li>
+            <li><a href="#">Portofolio</a></li>
+            <li><a href="#">Contact Me</a></li>
+        </ul>
+        <div class="menu-toggle">&#9776;</div>
+    </nav>
+    <h1>Galeri Foto</h1>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="Belajarkelompok.jpg" alt="Gambar 1">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore temporibus magnam, suscipit vel et blanditiis dignissimos fuga deleniti est. Adipisci autem aperiam in? Ipsa sapiente pariatur quos, cumque mollitia beatae!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Komunitasbelajar.jpg" alt="Gambar 2">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore temporibus magnam, suscipit vel et blanditiis dignissimos fuga deleniti est. Adipisci autem aperiam in? Ipsa sapiente pariatur quos, cumque mollitia beatae!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="osis.jpg" alt="Gambar 3">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore temporibus magnam, suscipit vel et blanditiis dignissimos fuga deleniti est. Adipisci autem aperiam in? Ipsa sapiente pariatur quos, cumque mollitia beatae!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="pk.jpg" alt="Pesantren Kilat">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore temporibus magnam, suscipit vel et blanditiis dignissimos fuga deleniti est. Adipisci autem aperiam in? Ipsa sapiente pariatur quos, cumque mollitia beatae!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="withnenek.jpg" alt="Bersama Nenek">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore temporibus magnam, suscipit vel et blanditiis dignissimos fuga deleniti est. Adipisci autem aperiam in? Ipsa sapiente pariatur quos, cumque mollitia beatae!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="witholdfriend.jpg" alt="Bersama Teman Lama">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore temporibus magnam, suscipit vel et blanditiis dignissimos fuga deleniti est. Adipisci autem aperiam in? Ipsa sapiente pariatur quos, cumque mollitia beatae!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Withpaktantyo.jpg" alt="Bersama Pak Tantyo">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore temporibus magnam, suscipit vel et blanditiis dignissimos fuga deleniti est. Adipisci autem aperiam in? Ipsa sapiente pariatur quos, cumque mollitia beatae!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="lonely.jpg" alt="My Loneliness">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore temporibus magnam, suscipit vel et blanditiis dignissimos fuga deleniti est. Adipisci autem aperiam in? Ipsa sapiente pariatur quos, cumque mollitia beatae!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="childhood.jpg" alt="With Razka">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore temporibus magnam, suscipit vel et blanditiis dignissimos fuga deleniti est. Adipisci autem aperiam in? Ipsa sapiente pariatur quos, cumque mollitia beatae!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="fotsin.jpg" alt="Sendirian bae">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore temporibus magnam, suscipit vel et blanditiis dignissimos fuga deleniti est. Adipisci autem aperiam in? Ipsa sapiente pariatur quos, cumque mollitia beatae!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="work-2.png" alt="nothing less work">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore temporibus magnam, suscipit vel et blanditiis dignissimos fuga deleniti est. Adipisci autem aperiam in? Ipsa sapiente pariatur quos, cumque mollitia beatae!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="work-3.png" alt="nothing less work">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore temporibus magnam, suscipit vel et blanditiis dignissimos fuga deleniti est. Adipisci autem aperiam in? Ipsa sapiente pariatur quos, cumque mollitia beatae!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="work-1.png" alt="nothing less work">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eius modi quae quis dolorem omnis expedita harum amet doloremque, laudantium ea possimus odit reprehenderit quasi tenetur libero molestiae ullam delectus!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo1.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis error facilis, aperiam quasi esse voluptate temporibus similique, enim eaque quos officia, porro inventore maxime quas? Eaque quibusdam debitis ad saepe!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo2.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iusto assumenda repellat amet, totam voluptates quasi ex ipsa. Consequuntur, qui! Earum hic laboriosam dolorem pariatur consequuntur explicabo dolor, debitis blanditiis.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo3.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque voluptates sit doloribus itaque placeat nesciunt aut numquam facilis exercitationem ratione consequatur eos unde recusandae nam qui, libero iste, tenetur iusto?</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo4.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam repudiandae molestias qui. Deleniti dolor quasi maiores, quas amet et eum velit aperiam alias qui repellat vitae illum dicta culpa minima.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo5.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ullam assumenda, expedita accusamus corrupti, delectus magnam aliquam ipsa sit reprehenderit vero laboriosam? Praesentium corrupti vero qui odit inventore! Mollitia, iusto.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo6.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui unde nihil vero reprehenderit quod? Natus rem in provident asperiores earum delectus! Necessitatibus animi dolorum magni ratione repellat nemo quas voluptatibus!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo7.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quis ipsa incidunt animi provident magnam porro nobis asperiores illum voluptates quibusdam deleniti pariatur nihil tempore dignissimos architecto, distinctio minus commodi.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo8.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti animi accusamus reprehenderit aliquid esse odio possimus dignissimos, magnam doloremque magni autem sed laborum dolorem laboriosam neque at ipsa architecto.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo9.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero veritatis quasi unde inventore tempora, modi illo quibusdam commodi magnam eos aperiam molestias, culpa id nisi esse, natus sed optio cupiditate.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo10.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quaerat quas magni ipsa nesciunt blanditiis porro expedita veritatis, voluptatem sunt distinctio ut aliquam similique officia provident ullam, aperiam facere! Asperiores.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo11.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dicta totam necessitatibus culpa suscipit? Accusamus sit ipsam id magnam consequuntur consectetur iusto dicta saepe, sint sequi eveniet vitae, repudiandae adipisci.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo12.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis laudantium cumque a. Ullam, repellendus pariatur rem temporibus numquam dolorum provident, nemo atque dolor odit, obcaecati quo adipisci nihil rerum expedita.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo13.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos fugit dolorem quo doloribus rem delectus, quam vero at beatae, nobis excepturi deleniti ducimus quasi sequi? Facilis vel illo aperiam deserunt?</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo14.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium deleniti, ipsam tempore maxime hic reprehenderit libero dolorem provident voluptate quo ut quibusdam ab nesciunt quaerat, at expedita maiores harum fugiat!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo15.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga blanditiis et aliquid minima consequatur suscipit officiis beatae necessitatibus nobis, explicabo ullam optio ea adipisci, laboriosam minus quae aspernatur. Illum, quaerat.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo16.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ipsam laboriosam earum eum deleniti incidunt consectetur provident voluptatibus. Cumque praesentium natus voluptatum. Quam molestias, ea ab rem totam eos pariatur!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo17.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ab sapiente inventore eveniet doloribus? Ratione neque laboriosam saepe enim facere est eos error, alias, dicta provident nisi et quo cum.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo18.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quo aspernatur repellendus exercitationem, illum quia pariatur nobis praesentium, quidem deserunt distinctio suscipit soluta aperiam, facere hic id cumque blanditiis provident.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo19.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque vel totam voluptatum illum omnis. Ab, tenetur. Possimus deleniti error repellat facilis, eum delectus, ab sunt, aliquam nisi beatae dolores labore.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="photo20.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit nostrum beatae reiciendis repellat! Eius reiciendis accusantium eos minima molestias omnis libero facilis natus? Dolor officia porro accusamus minima, explicabo soluta.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="new-1.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam debitis dolorem reiciendis sit minima quas velit vel, maxime cumque aperiam, rem porro fugit consequuntur repellat explicabo. Totam iste necessitatibus id!</div>
+        </div>
+        <div class="gallery-item">
+            <img src="new-2.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste atque ipsam sit nulla iusto explicabo debitis harum suscipit, illo, quae eligendi! Porro rerum atque enim numquam officiis recusandae quasi pariatur.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="new-3.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis et aut voluptate saepe ducimus iste, repellendus impedit in, nostrum, molestiae sint! Et assumenda officia deleniti soluta amet. Laboriosam, deserunt nisi?</div>
+        </div>
+        <div class="gallery-item">
+            <img src="new-4.jpg" alt="Nothing but memories">
+            <div class="overlay">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos sint veniam aut modi minus aliquid, ratione magni tempore odio, doloribus repellat ducimus temporibus culpa iste ipsa fuga aspernatur dicta numquam!</div>
+        </div>
+        <!-- Tambahkan lebih banyak gambar sesuai kebutuhan -->
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navLinks = document.querySelector(".nav-links");
+    
+            // Fungsi untuk toggle class active
+            menuToggle.addEventListener("click", function () {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>
