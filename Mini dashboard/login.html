@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="login.css">
     <title>Login Pages</title>
+<script>
+  document.getElementById("loginform").addEventListener("submit", function(event){
+    event.preventDefault(); // Mencegah pengiriman form
+    window.location.href = "dashboard.html"; // Ganti dengan URL tujuan
+  });
+</script>
 </head>
 <body>
     <div class="login-container">
         <h1>Login Form</h1>
-        <form action="dashboard.html" method="post" id="loginform" onsubmit="return validateLogin()">
+        <form action="" method="post" id="loginform" onsubmit="return validateLogin()">
             <label for="username">Username: </label>
             <input type="text" id="username" required placeholder="pakridwan">
             <br>
