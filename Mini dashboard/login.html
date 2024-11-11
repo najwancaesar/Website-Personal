@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="login.css">
     <title>Login Pages</title>
-<script>
-  document.getElementById("loginform").addEventListener("submit", function(event){
-    event.preventDefault(); // Mencegah pengiriman form
-    window.location.href = "dashboard.html"; // Ganti dengan URL tujuan
-  });
-</script>
 </head>
 <body>
     <div class="login-container">
@@ -57,5 +51,11 @@
             }
         }
     </script>
+<script>
+  document.getElementById("loginform").addEventListener("submit", function(event){
+    event.preventDefault(); // Mencegah pengiriman form
+    window.location.href = "dashboard.html"; // Ganti dengan URL tujuan
+  });
+</script>
 </body>
 </html>
