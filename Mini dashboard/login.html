@@ -55,6 +55,14 @@
   document.getElementById("loginform").addEventListener("submit", function(event){
     event.preventDefault(); // Mencegah pengiriman form
     window.location.href = "dashboard.html"; // Ganti dengan URL tujuan
+const username = document.getElementById("username").value;
+const password = document.getElementById("password").value;
+
+if (username === "pakridwan" && password === "ganteng") { 
+window.location.href = "dashboard.html"
+} else {
+alert ("Sorry, Username atau Password salah.");
+}
   });
 </script>
 </body>
