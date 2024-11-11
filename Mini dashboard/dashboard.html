@@ -3,289 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="dashboard.css">
+    <title>Web Responsive</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .minidash {
+            display: inline-block;
+            background-color: aqua;
+            width: 25%;
+            border-radius: 20px;
+            font-weight: 100;
+            padding-left: 30px;
+            margin: 30px 30px;
+            text-align: center;
+            
+        }
+        .minidash::after {
+            transition: 1s;
+        }
+        .content:hover {
+            background-color: burlywood;
+            width: fit-content;
+            justify-content: none;
+            align-items: none;
+            border: 2px solid greenyellow;
+            font-size: 15px;
+            transition: 0.5s ease-out;
+            border-radius: 10px;
+            margin: 0;
+            justify-content: left;
+            text-align: right;
+            display: inline-flex;
+        }
+        .content:hover::after {
+            position: absolute;
+            transform: translateY(-10px);
+            cursor: pointer;
+        }
+        h1:hover {
+            transition: 0.5s ease-in-out;
+            transform: translateX(-10px);
+            background-color: chocolate;
+            text-align: center;
+            justify-content: center;
+            cursor: pointer;
+            width: 10%;
+            margin: 10px 20px;
+            padding: 30px;
+        }
+        h1 {
+            background-color: aqua;
+            border-radius: 20px;
+            width: 20%;
+            text-align: center;
+            text-decoration: underline;
+        }
+    </style>
 </head>
-    <script>
-            function logout() {
-                var confirm = window.confirm('Apakah anda ingin logout ?')
-                if (confirm === true) {
-                    window.location.href = 'login.html'
-                }
-                return false
-            }
-            function profil() {
-                var confirm = window.confirm('Kembali ke halaman profile?')
-                if (confirm === true) {
-                    window.location.href = 'profile.html'
-                } 
-                return false
-            }
-    </script>
 <body>
-    <div class="header">
-        <div class="logo">NajwanCF's Dashboard</div>
-    </div>
-    <div class="container">
-        <div class="sidebar">
-            <br><br><br>
-            <ul>
-                <li><a href="" id="login" onclick="return profil()" target="_blank">Profil</a></li>
-                
-                <li><a href="" id="logout" for="logout" onclick="return logout()" target="_blank">Logout</a></li>
+    <table>
+    </table>
+    <div class="header" size="100%">
+        <div class="logo" size="10%">
+            <img src="Logopoltek2.png" alt="logo poltek" align="left">
+        </div>
+        <nav>
+            <ul class="sidebar">
+                <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="pendidikan.html">Pendidikan</a></li>
+                <li><a href="aktivitas.html">Aktivitas</a></li>
+                <li ><a href="jadwal-kuliah.html">Jadwal Kuliah</a></li>
+                <li><a href="login.html">Login Page</a></li>
+                <img src="Logopoltek2.png" alt="logo poltek" align="left">
             </ul>
-        </div>
-        <br><br><br>
+            <ul>
+                <li class="hideOnMobile"><a href="home.html">Home</a></li>
+                <li class="hideOnMobile"><a href="pendidikan.html">Pendidikan</a></li>
+                <li class="hideOnMobile"><a href="aktivitas.html">Aktivitas</a></li>
+                <li class="hideOnMobile"><a href="jadwal-kuliah.html">Jadwal Kuliah</a></li>
+                <li class="hideOnMobile"><a href="login.html">Login Page</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="minidash">
+        <h3>My mini dashboard</h3>
         <div class="content">
-            <br><br><br>
-            <h2>Data Tabel Mahasiswa IT</h2>
-            <br><br>
-            <table>
-                <tr>
-                    <th>No</th>
-                    <th>Nama</th>
-                    <th>NIM</th>
-                    <th>Nomor Hp</th>
-                    <th>Hobby</th>
-                    <th>Asal</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Achmad Miftahul Tama</td>
-                    <td>2404001</td>
-                    <td>+62 855-7809-216</td>
-                    <td>Dengerin Musik</td>
-                    <td>Tangerang</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Adam Ramdani</td>
-                    <td>2404002</td>
-                    <td>+62 855-2475-1218</td>
-                    <td>Fotografi</td>
-                    <td>Garut</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Ahmad Fauzi</td>
-                    <td>2404003</td>
-                    <td>+62 838-2475-7542</td>
-                    <td>Main Catur</td>
-                    <td>Majalengka</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Ahmad Naufal Fathirrohman</td>
-                    <td>2404004</td>
-                    <td>+62 895-3382-64486</td>
-                    <td>Main Bola</td>
-                    <td>Tangerang</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Aprillia Dwiyani</td>
-                    <td>2404005</td>
-                    <td>+62 895-3957-55029</td>
-                    <td>Jalan-jalan</td>
-                    <td>Madiun</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Azmi Anindya Afsari</td>
-                    <td>2404006</td>
-                    <td>+62 812-9523-2916</td>
-                    <td>Dengerin Musik</td>
-                    <td>Tangerang</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>Danar Wahyu Sudrajat</td>
-                    <td>2404007</td>
-                    <td>+62 857-8089-6183</td>
-                    <td>Menonton</td>
-                    <td>Tangerang</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Dwi Buana Nursallyna</td>
-                    <td>2404008</td>
-                    <td>+62 882-1315-6755</td>
-                    <td>Traveling</td>
-                    <td>Tangerang</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>Erintia Widya Pangestika</td>
-                    <td>2404009</td>
-                    <td>+62 838-7242-5234</td>
-                    <td>Memasak</td>
-                    <td>Tangerang</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>Febri Nabilah</td>
-                    <td>2404010</td>
-                    <td>+62 856-9468-7524</td>
-                    <td>Nonton Film</td>
-                    <td>Tangerang</td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>Ferdinand Febriansyah</td>
-                    <td>2404011</td>
-                    <td>+62 812-9124-3545</td>
-                    <td>Badminton</td>
-                    <td>Jakarta Barat</td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>Hagi Sugara Putra</td>
-                    <td>2404012</td>
-                    <td>+62 812-9133-1723</td>
-                    <td>Menyanyi</td>
-                    <td>Tangerang</td>
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td>Kevin Dhayifullah Aqil Pashya</td>
-                    <td>2404013</td>
-                    <td>+62 812-9905-4411</td>
-                    <td>Main Game</td>
-                    <td>Bogor</td>
-                </tr>
-                <tr>
-                    <td>14</td>
-                    <td>Khoirul Jamil</td>
-                    <td>2404014</td>
-                    <td>+62 821-7507-6411</td>
-                    <td>Olahraga</td>
-                    <td>Lampung</td>
-                </tr>
-                <tr>
-                    <td>15</td>
-                    <td>Maulana Yazid Ramadhan</td>
-                    <td>2404015</td>
-                    <td>+62 858-1333-4924</td>
-                    <td>Olahraga</td>
-                    <td>Tangerang</td>
-                </tr>
-                <tr>
-                    <td>16</td>
-                    <td>Mohamad Alvin Makmun</td>
-                    <td>2404016</td>
-                    <td>+62 819-0711-5859</td>
-                    <td>Olahraga</td>
-                    <td>Tangerang</td>
-                </tr>
-                <tr>
-                    <td>17</td>
-                    <td>Muhammad Pauzul Ulum</td>
-                    <td>2404017</td>
-                    <td>+62 895-3836-27336</td>
-                    <td>Membaca & Nonton Film</td>
-                    <td>Tangerang</td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td>Muhammad Dzaky Ramadhani</td>
-                    <td>2404018</td>
-                    <td>+62 882-1350-3918</td>
-                    <td>Bersepeda</td>
-                    <td>Tangerang</td>
-                </tr>
-                <tr>
-                    <td>19</td>
-                    <td>Muhammad Farid Zacky</td>
-                    <td>2404019</td>
-                    <td>+62 896-0651-1769</td>
-                    <td>Bermain Volly</td>
-                    <td>Jawa Barat</td>
-                </tr>
-                <tr>
-                    <td>20</td>
-                    <td>Muhammad Ibnu Athoillah</td>
-                    <td>2404020</td>
-                    <td>+62 823-1457-9288</td>
-                    <td>Membaca</td>
-                    <td>Pekalongan</td>
-                </tr>
-                <tr>
-                    <td>21</td>
-                    <td>Mutia Fatimah Az-Zahra</td>
-                    <td>2404021</td>
-                    <td>+62 851-8088-3610</td>
-                    <td>Menulis</td>
-                    <td>Tangerang</td>
-                </tr>
-                <tr>
-                    <td>22</td>
-                    <td>Naila Zulfa Aliifah</td>
-                    <td>2404022</td>
-                    <td>+62 895-6194-03859</td>
-                    <td>Main Basket</td>
-                    <td>Tangerang</td>
-                </tr>
-                <tr>
-                    <td>23</td>
-                    <td>Najwan Caesar Firstiansyah</td>
-                    <td>2404023</td>
-                    <td>+62 878-8483-9384</td>
-                    <td>Bermain Rubiks</td>
-                    <td>Jakarta Utara</td>
-                </tr>
-                <tr>
-                    <td>24</td>
-                    <td>Raihan Ananda Permadi</td>
-                    <td>2404024</td>
-                    <td>+62 812-9814-5012</td>
-                    <td>Bermain Basket</td>
-                    <td>Priuk</td>
-                </tr>
-                <tr>
-                    <td>25</td>
-                    <td>Rifki Alwi Fajrian</td>
-                    <td>2404025</td>
-                    <td>+62 838-9558-5199</td>
-                    <td>Mendaki</td>
-                    <td>Tangerang</td>
-                </tr>
-                <tr>
-                    <td>26</td>
-                    <td>Stevanus Lucky Ardianto</td>
-                    <td>2404026</td>
-                    <td>+62 812-1838-4714</td>
-                    <td>Main Game</td>
-                    <td>Tangerang</td>
-                </tr>
-                <tr>
-                    <td>27</td>
-                    <td>Syawaludin Novaliansyah</td>
-                    <td>2404027</td>
-                    <td>+62 895-6165-57026</td>
-                    <td>Berenang</td>
-                    <td>Jakarta Timur</td>
-                </tr>
-                <tr>
-                    <td>28</td>
-                    <td>Tangguh Putra Mahardika</td>
-                    <td>2404028</td>
-                    <td>+62 852-1334-0048</td>
-                    <td>Membaca</td>
-                    <td>Tangerang</td>
-                </tr>
-                <tr>
-                    <td>29</td>
-                    <td>Tia Puspitasari Putri</td>
-                    <td>2404029</td>
-                    <td>+62 853-1190-1701</td>
-                    <td>Dengerin Musik</td>
-                    <td>Tangerang</td>
-                </tr>
-            </table>
+            <ol type="A">
+                <li>Mini dashboard</li>
+                <li>My next project</li>
+                <li>My next future project</li>
+            </ol>
         </div>
     </div>
-    <div class="footer">
-        <p>Copyright © 2024</p>
-    </div>
+    <h1>Hello World</h1>
+    <script>
+        function showSidebar () {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
 </body>
 </html>
