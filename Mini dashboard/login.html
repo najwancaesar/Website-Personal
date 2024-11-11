@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="login.css">
+    <title>Login Pages</title>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login Form</h1>
+        <form action="dashboard.html" method="post" id="loginform" target="_blank" onsubmit="return validateLogin()">
+            <label for="username">Username: </label>
+            <input type="text" id="username" required placeholder="pakridwan">
+            <br>
+            <label for="password">Password: </label>
+            <input type="password" id="password" required placeholder="ganteng">
+            <br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    <script>
+        window.onload = function() {
+        // Tambahkan prompt untuk menyambut pengguna
+        let userName;
+        // Lakukan prompt hingga pengguna mengisi nama
+        while (!userName) {
+        userName = window.prompt("Hello! What's your name?");
+        if (!userName) {
+            alert("Sorry, but you have to input your name !");
+            }
+        }
+        // Tampilkan pesan selamat datang
+        alert("Welcome back, " + userName + "!");
+        };
+            const container = document.querySelector('.login-container');
+            container.style.transform = 'translateY(-100vh)';
+            setTimeout(() => {
+                container.style.transition = 'transform 1s ease-in-out'; // Durasi 1 detik
+                container.style.transform = 'translateY(0)';
+            }, 300); // Delay 300ms sebelum animasi muncul
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username === "pakridwan" && password === "ganteng") {
+                alert("Selamat datang kembali, Pak Ridwan yang Ganteng :)");
+                return true; 
+            } else {
+                alert("User dan password salah");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

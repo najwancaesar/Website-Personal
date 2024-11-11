@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Responsive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table>
+    </table>
+    <div class="header">
+        <nav>
+            <img src="Logopoltek2.png" alt="logo poltek" align="left">
+            <ul class="sidebar">
+                <li class="fas" onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Pendidikan</a></li>
+                <li><a href="#">Aktivitas</a></li>
+                <li><a href="#">Jadwal Kuliah</a></li>
+                <li><a href="#">My Project</a></li>
+                <li><a href="#">Contact Me</a></li>
+                <img src="Logopoltek2.png" alt="logo poltek">
+            </ul>
+            <ul>
+                <li class="hideOnMobile"><a href="../index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="#">Pendidikan</a></li>
+                <li class="hideOnMobile"><a href="#">Aktivitas</a></li>
+                <li class="hideOnMobile"><a href="#">Jadwal Kuliah</a></li>
+                <li class="hideOnMobile"><a href="#">My Project</a></li>
+                <li class="hideOnMobile"><a href="#">Contact Me</a></li>
+                <li class="fas" class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="container-li">
+            <div class="title">
+                <h1>List of my project down here :</h1>
+                <br><br><br>
+            </div>
+            <ul class="list-item">
+                <li class="project"><a href="../Mini dashboard/login.html">My Mini Dashboard</a></li>
+                <li class="project"><a href="#">Project 2</a></li>
+                <li class="project"><a href="#">Project 3</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function showSidebar () {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>

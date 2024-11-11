@@ -36,11 +36,11 @@ nav {
 }
 .logo {
     width: 100px;
-    cursor: pointer;
+    cursor: zoom-in;
 }
 .logo:hover {
     transition: 0.5s ease-in;
-    transform: scale(1.2);
+    transform: scale(1.3);
 }
 nav ul li {
     display: inline-block;

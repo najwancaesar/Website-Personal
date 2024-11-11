@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">NajwanCF's Profile</div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#" onclick="dashboard()">Dashboard</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h3>Ubah Informasi</h3>
+            <form action="login.html">
+                <table>
+                    <tr>
+                        <td><label for="username">Username :</label><br><br>
+                            <input type="text" required placeholder="Najwan Caesar Firstiansyah" style="width: 40%;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="Email">Email :</label><br><br>
+                            <input type="Email" required placeholder="najwan12311@gmail.com" style="width: 40%;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="NOHP">No.Hp :</label><br><br>
+                            <input type="Number" required placeholder="(+62) 87884839384" style="width: 40%;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="Alamat">Alamat : </label><br><br>
+                            <textarea name="Alamat" id="Alamat" cols="60%" rows="4%" required placeholder="Domisili Alamat Tempat Anda Tinggal Saat Ini"></textarea>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><label for="facebook">Facebook.com</label><br>
+                            <input type="text" required placeholder="https://Facebook.com">
+                        </td>
+                        <td><label for="instagram">Instagram.com</label><br>
+                            <input type="text" required placeholder="https://Instagram.com">
+                        </td>
+                        <td><label for="youtube">Youtube.com</label><br>
+                            <input type="text" required placeholder="https://Youtube.com">
+                        </td>
+                        <td><label for="LinkedIN">LinkedIn.com</label><br>
+                            <input type="text" required placeholder="https://Linkedin.com">
+                        </td>
+                    </tr>
+                </table>
+                <input id="change" type="submit" value="Change!">
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright © 2024</p>
+    </div>
+</body>
+</html>
+<script>
+    function dashboard() {
+        if (confirm('Kembali ke halaman dashboard?')) {
+            window.location.href = 'dashboard.html';
+        }
+        return false;
+    }
+    function logout() {
+        if (confirm('Apakah anda ingin logout?')) {
+            window.location.href = 'login.html';
+        }
+        return false;
+    }
+</script>

@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: white;
+    overflow: hidden;
+}
+.content h3 {
+    margin-left: 7px;
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orangered;
+    color: whitesmoke;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.header .logo {
+    font-size: 1.5em;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    margin-top: -1em;
+}
+
+.sidebar {
+    position: fixed;
+    top: 30px; /* Offset for header */
+    bottom: 20px; /* Offset for footer */
+    width: 150px;
+    background-color: #ffe600;
+    overflow-y: auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    margin-top: 4em;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    background-color: royalblue;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+.content {
+    margin-left: 170px; /* Offset for sidebar width */
+    margin-top: 70px; /* Offset for header */
+    padding: 20px;
+    flex: 1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+a {
+    border-radius: 4px;
+    padding: 10px;
+    background-color: beige;
+    color: brown;
+}
+
+a:hover {
+    background-color: aquamarine;
+}
+
+input#change {
+    background-color: blue;
+    color: white;
+    transition: 0.5s ease;
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    width: 10%;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 8px;
+}
+
+input#change:hover {
+    background-color: blueviolet;
+    transition: 0.5s ease-in-out;
+    transform: scale(1.1);
+    font-size: 1em;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: orangered;
+    padding: 10px;
+    text-align: center;
+    color: whitesmoke;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
