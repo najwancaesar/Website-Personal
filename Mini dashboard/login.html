@@ -55,10 +55,13 @@
     window.location.href = "dashboard.html"; // Ganti dengan URL tujuan
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-    if (username === "pakridwan" && password === "ganteng") { 
-    window.location.href = "dashboard.html"
+    if (username === "pakridwan" && password === "ganteng") {
+        alert("Selamat datang kembali, Pak Ridwan yang Ganteng :)");
+        window.location.href = "dashboard.html"
+        return true;
     } else {
-    alert("Sorry, Username atau Password nya salah !");
+        alert("Sorry, Username atau Password nya salah !");
+        return false;
     }
   });
     </script>
