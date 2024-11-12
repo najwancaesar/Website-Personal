@@ -39,31 +39,28 @@
                 container.style.transition = 'transform 1s ease-in-out'; // Durasi 1 detik
                 container.style.transform = 'translateY(0)';
             }, 300); // Delay 300ms sebelum animasi muncul
-        function validateLogin() {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-            if (username === "pakridwan" && password === "ganteng") {
-                alert("Selamat datang kembali, Pak Ridwan yang Ganteng :)");
-                return true; 
-            } else {
-                alert("User dan password salah");
-                return false;
-            }
-        }
-    </script>
-<script>
-  document.getElementById("loginform").addEventListener("submit", function(event){
+        // function validateLogin() {
+        //     var username = document.getElementById("username").value;
+        //     var password = document.getElementById("password").value;
+        //     if (username === "pakridwan" && password === "ganteng") {
+        //         alert("Selamat datang kembali, Pak Ridwan yang Ganteng :)");
+        //         return true; 
+        //     } else {
+        //         alert("User dan password salah");
+        //         return false;
+        // }
+        // }
+    document.getElementById("loginform").addEventListener("submit", function(event){
     event.preventDefault(); // Mencegah pengiriman form
     window.location.href = "dashboard.html"; // Ganti dengan URL tujuan
-const username = document.getElementById("username").value;
-const password = document.getElementById("password").value;
-
-if (username === "pakridwan" && password === "ganteng") { 
-window.location.href = "dashboard.html"
-} else {
-alert("Sorry, Username atau Password salah.");
-}
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    if (username === "pakridwan" && password === "ganteng") { 
+    window.location.href = "dashboard.html"
+    } else {
+    alert("Sorry, Username atau Password nya salah !");
+    }
   });
-</script>
+    </script>
 </body>
 </html>
