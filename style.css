@@ -8,6 +8,9 @@ html{
     scroll-behavior: smooth;
     scrollbar-width: smooth;
 }
+#bg-music {
+    display: none;
+}
 body {
     background: #080808;
     color: #fff;

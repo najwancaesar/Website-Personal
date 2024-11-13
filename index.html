@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +8,7 @@
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/typeit@8.0.3/dist/index.umd.js"></script>
     <script>
-            // Menambahkan elemen audio untuk suara typing
-            var typingSound = new Audio('C:\Users\Najwan CF\Documents\Folder Coding\Web Portofolio\audio\sound-type2.mp3'); // Ganti dengan path ke file audio ketikan Anda
-            // Fungsi untuk memainkan suara typing
-            function playTypingSound() {
-                typingSound.currentTime = 0;  // Memastikan suara mulai dari awal
-                typingSound.play();
-            }
-        document.addEventListener("DOMContentLoaded", function () {
+            document.addEventListener("DOMContentLoaded", function () {
                 new TypeIt(".header-text p", {
                     strings: ["I'm <span style='color: crimson;'>NajwanCF</span> a.k.a <span style='color: springgreen; text-decoration: oblique;'>Just4Fun</span>"],
                     speed: 130, // Kecepatan pengetikan (opsional)
@@ -43,10 +36,23 @@
                     }
                 }).go();
             });
+            document.addEventListener('click', function () {
+                    var bgMusic = document.getElementById('bg-music');
+                    if (bgMusic.muted) {
+                        bgMusic.muted = false;
+                        bgMusic.play();
+                    }
+                });
     </script>
 </head>
 <body>
     <div id="header">
+<!-- Tambahkan elemen audio yang tidak terlihat di dalam body -->
+<audio id="bg-music" controls autoplay loop muted>
+    <source src="./audio/music-background.mp3" type="audio/mp3">
+    <!-- Jika Anda memiliki format alternatif seperti .wav, tambahkan juga -->
+    <source src="./audio/Spirit.wav" type="audio/wav">
+</audio>
         <div class="container">
             <nav>
                 <img src="my-images/Resize-logo (1).png" alt="Logo-poltek" class="logo">
@@ -165,7 +171,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn" target="_blank">See more about my Gallery !</a>
+            <a href="#" class="btn" target="_blank" style="margin-bottom: 1em;">See more about my Gallery !</a>
         </div>
     </div>
     <!-- -------------------contact------------------------- -->
