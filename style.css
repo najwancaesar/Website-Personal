@@ -416,6 +416,9 @@ nav .fas {
     .about-col-1, .about-col-2 {
         flex-basis: 100%;
     }
+    .about-col-1 img {
+        height: 320px;
+    }
     .about-col-1 {
         margin-bottom: 30px;
     }
