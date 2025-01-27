@@ -13,8 +13,9 @@
     <div class="container">
         <div class="sidebar">
             <ul>
-                <li><a href="#" onclick="dashboard()">Dashboard</a></li>
-                <li><a href="#" onclick="logout()">Logout</a></li>
+                <li><a href="#" id="dashboard" onclick="dashboard()"target="_blank">Dashboard</a></li>
+                <li><a href="#" id="home" onclick="return home()" target="_blank">Home</a></li>
+                <li><a href="#" id="logout" onclick="logout()"target="_blank">Logout</a></li>
             </ul>
         </div>
         <div class="content">
@@ -80,4 +81,11 @@
         }
         return false;
     }
+    function home() {
+                var confirm = window.confirm('Kembali ke halaman dashboard home ?')
+                if (confirm === true) {
+                    window.location.href = '../index.html'
+                } 
+                return false
+            }
 </script>
