@@ -191,11 +191,12 @@
                     <a href="my-images/CV.pdf" download class="btn btn2" target="_blank" style="margin-top: 18%;">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="288e98f4-6276-4f20-af9d-c7f3b63f0821">
+                        <input type="text" name="name" required>
+                        <input type="email" name="email" required>
+                        <textarea name="message" required></textarea>
+                        <button type="submit">Submit</button>
                     </form>
                     <span id="msg"></span>
                 </div>
